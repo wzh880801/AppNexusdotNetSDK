@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Westwin.AppNexus.Api", "source\Westwin.AppNexus.Api\Westwin.AppNexus.Api.csproj", "{9E9009B5-A3AC-4070-BBF6-A94D4FD95293}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Westwin.AppNexus.Api.Test", "demo\Westwin.AppNexus.Api.Test\Westwin.AppNexus.Api.Test.csproj", "{C4371E3E-91BA-4C0B-9568-0F236000F082}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Westwin.AppNexus.GenerateTool", "tools\Westwin.AppNexus.GenerateTool\Westwin.AppNexus.GenerateTool.csproj", "{014A3FFA-E54F-4482-B4A5-2A159C0FDFF2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9E9009B5-A3AC-4070-BBF6-A94D4FD95293}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E9009B5-A3AC-4070-BBF6-A94D4FD95293}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E9009B5-A3AC-4070-BBF6-A94D4FD95293}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E9009B5-A3AC-4070-BBF6-A94D4FD95293}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4371E3E-91BA-4C0B-9568-0F236000F082}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4371E3E-91BA-4C0B-9568-0F236000F082}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4371E3E-91BA-4C0B-9568-0F236000F082}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4371E3E-91BA-4C0B-9568-0F236000F082}.Release|Any CPU.Build.0 = Release|Any CPU
+		{014A3FFA-E54F-4482-B4A5-2A159C0FDFF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{014A3FFA-E54F-4482-B4A5-2A159C0FDFF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{014A3FFA-E54F-4482-B4A5-2A159C0FDFF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{014A3FFA-E54F-4482-B4A5-2A159C0FDFF2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

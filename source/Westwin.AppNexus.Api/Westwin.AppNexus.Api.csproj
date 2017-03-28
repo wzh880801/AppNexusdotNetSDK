@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9E9009B5-A3AC-4070-BBF6-A94D4FD95293}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Westwin.AppNexus.Api</RootNamespace>
+    <AssemblyName>Westwin.AppNexus.Api</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SimpleWebRequestHelper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\MicrosoftOnline.Ads\MicrosoftOnline.Ads.BIClient\SimpleWebRequestHelper\bin\Release\SimpleWebRequestHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppNexusEntity\AccountOwnerUser.cs" />
+    <Compile Include="AppNexusEntity\Advertiser.cs" />
+    <Compile Include="AppNexusEntity\AdvertiserInfo.cs" />
+    <Compile Include="AppNexusEntity\AppNexusApiBaseResponse.cs" />
+    <Compile Include="AppNexusEntity\Creative.cs" />
+    <Compile Include="AppNexusEntity\DbgInfo.cs" />
+    <Compile Include="AppNexusEntity\FlatFee.cs" />
+    <Compile Include="AppNexusEntity\IdNamePair.cs" />
+    <Compile Include="AppNexusEntity\InventoryTrust.cs" />
+    <Compile Include="AppNexusEntity\Labels.cs" />
+    <Compile Include="AppNexusEntity\LineItem.cs" />
+    <Compile Include="AppNexusEntity\Mediation.cs" />
+    <Compile Include="AppNexusEntity\Member.cs" />
+    <Compile Include="AppNexusEntity\ServingDomain.cs" />
+    <Compile Include="AppNexusEntity\SiphonInfo.cs" />
+    <Compile Include="AppNexusEntity\SplitInfo.cs" />
+    <Compile Include="AppNexusEntity\StandardSize.cs" />
+    <Compile Include="AppNexusEntity\User.cs" />
+    <Compile Include="AppNexusEntity\Valuation.cs" />
+    <Compile Include="Entity\Advertiser\GetAdvertiserRequest.cs" />
+    <Compile Include="Entity\Advertiser\GetAdvertiserResponse.cs" />
+    <Compile Include="Entity\LineItem\GetAdvertiserLineItemRequest.cs" />
+    <Compile Include="Entity\LineItem\GetAdvertiserLineItemResponse.cs" />
+    <Compile Include="Entity\LogLevelData\GetSiphonRequest.cs" />
+    <Compile Include="Entity\LogLevelData\GetSiphonResponse.cs" />
+    <Compile Include="Entity\Meta\GetLineItemMetadataRequest.cs" />
+    <Compile Include="Entity\Meta\GetReportMetadataRequest.cs" />
+    <Compile Include="Entity\Meta\GetLineItemMetadataResponse.cs" />
+    <Compile Include="Entity\Meta\GetReportMetadataResponse.cs" />
+    <Compile Include="Entity\Report\DownloadReportFileResponse.cs" />
+    <Compile Include="Entity\Report\DownloadReportFileRequest.cs" />
+    <Compile Include="Entity\Report\PollReportStatusResponse.cs" />
+    <Compile Include="Entity\Report\PollReportStatusRequest.cs" />
+    <Compile Include="Entity\UserMember\GetUserRequest.cs" />
+    <Compile Include="Entity\UserMember\GetUserResponse.cs" />
+    <Compile Include="Entity\Report\SubmitReportRequest.cs" />
+    <Compile Include="Entity\Report\SubmitReportResponse.cs" />
+    <Compile Include="Entity\UserMember\ViewMemberRequest.cs" />
+    <Compile Include="Entity\UserMember\ViewMemberResponse.cs" />
+    <Compile Include="Enum\AuditStatus.cs" />
+    <Compile Include="Enum\CampaignGroupValuationStrategy.cs" />
+    <Compile Include="Enum\CreativeFormat.cs" />
+    <Compile Include="Enum\CreativeStatus.cs" />
+    <Compile Include="Enum\FlatfeeStatus.cs" />
+    <Compile Include="Enum\LabelType.cs" />
+    <Compile Include="Enum\LogFeedType.cs" />
+    <Compile Include="Enum\Operator.cs" />
+    <Compile Include="Enum\ReportColumn\AdvertiserAnalyticsDailyReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\AdvertiserAnalyticsDailyTest2ReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\AdvertiserAnalyticsReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\AdvertiserFrequencyRecencyReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\AdvertiserFrequencyReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\AttributedConversionsReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\AudioAnalyticsNetworkReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\BuyerBidErrorReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\BuyerDataUsageAnalyticsAdvertiserReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\BuyerDataUsageAnalyticsReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\BuyerInvoiceReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\BuyerPlatformBillingReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\BuyerPricingReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\BuyerSegmentPerformanceReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\BuyerUntargetedSegmentPerformanceReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\ClicktrackersReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\CompletedCreativeAuditsReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\ContentCategoryVolumeReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\DataUsageAnalyticsForDataProvidersReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\DpSegmentUsageReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\ForecastReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\GeoAnalyticsReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\HearstBillingLlReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\InsertionOrderFrequencyReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\InventoryDailyUniquesReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\InventoryDomainAnalyticsReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\InventorySourceAnalyticsReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\KeyValueAnalyticsReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\KeyValuePairAnalyticsReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\LineItemFrequencyReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\LinkedinWeeklyReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\MediationAdjustmentsReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\MrcAnalyticsNetworkAdvertiserReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\MrcAnalyticsNetworkPublisherBUGISacReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\MrcAnalyticsNetworkPublisherReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\MrcAnalyticsNetworkReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\NetworkAdvertiserAnalyticsReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\NetworkAdvertiserFrequencyRecencyReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\NetworkAnalyticsFeedReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\NetworkAnalyticsProvisionalReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\NetworkAnalyticsReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\NetworkAttributedConversionsReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\NetworkBillingReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\NetworkCarrierAnalyticsReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\NetworkCreativeSearchReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\NetworkDeviceAnalyticsReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\NetworkPublisherAnalyticsReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\NetworkSiteDomainPerformanceReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\OptDashAnalyticsReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\OptDashAnalyticsTestReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\PartnerCenterBuySideReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\PartnerCenterSellSideReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\PeriscopeForecastReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\PixelFiredReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\PlatformBuyerReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\PlatformMediationPerformanceReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\PlatformSellerReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\PlatformSellerSiteDomainPerformanceReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\PrebidAnalyticsDailyReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\PrebidAnalyticsHourlyReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\PrebidAnalyticsReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\PublisherAnalyticsReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\PublisherBrandReviewReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\PublisherCreativeSearchReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\RrBidAnalyzerReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\RrBuyerAnalyticsBillingPeriodReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\RrBuyerAnalyticsDailyReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\RrBuyerAnalyticsHourlyReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\RrBuyerAnalyticsLifetimeReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\RrForecastReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\RrPeriscopeForecastReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\RrTargetedSegmentAnalyticsDailyReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\RrTargetedSegmentAnalyticsHourlyReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\SegmentLoadReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\SellerAnalyticsDailyReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\SellerAnalyticsHourlyReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\SellerAnalyticsLifetimeReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\SellerBidErrorReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\SellerBrandReviewReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\SellerDetectedSiteDomainReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\SellerFillAndDeliveryNetworkReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\SellerFillAndDeliveryPublisherReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\SellerInvoiceReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\SellerMonetizationReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\SellerPlatformBillingReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\SellerPricingReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\SellerSiteDomainReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\SiteDomainPerformanceReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\SpendProtectionAnalyticsReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\SpendProtectionViolationsReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\StandardLogLevelEvents2ReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\StandardLogLevelEventsReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\SupplementalInvoiceActivityReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\TpasAnalyticsReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\TtuiPlatformSellerReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\TtuiSellerPlatformBillingReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\VideoAnalyticsNetworkAdvertiserReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\VideoAnalyticsNetworkPublisherReportColumn.cs" />
+    <Compile Include="Enum\ReportColumn\VideoAnalyticsNetworkReportColumn.cs" />
+    <Compile Include="Enum\ReportFormat.cs" />
+    <Compile Include="Enum\ReportingDecimalType.cs" />
+    <Compile Include="Enum\ReportInterval.cs" />
+    <Compile Include="Enum\OrderDirection.cs" />
+    <Compile Include="Enum\ReportStatus.cs" />
+    <Compile Include="Enum\ReportTimezone.cs" />
+    <Compile Include="Enum\ReportType.cs" />
+    <Compile Include="Enum\SplitStatus.cs" />
+    <Compile Include="Enum\TimeGranularity.cs" />
+    <Compile Include="Enum\TimeZone.cs" />
+    <Compile Include="Interface\IReportingService.cs" />
+    <Compile Include="Interface\IUserMemberService.cs" />
+    <Compile Include="PremiumAppNexusApiClient.cs" />
+    <Compile Include="DefaultAppNexusApiTestClient.cs" />
+    <Compile Include="DefaultAppNexusApiClient.cs" />
+    <Compile Include="Entity\AppNexusBaseRequest.cs" />
+    <Compile Include="Entity\AppNexusBaseResponse.cs" />
+    <Compile Include="Entity\Auth\AuthenticationRequest.cs" />
+    <Compile Include="Entity\Auth\AuthenticationResponse.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\ReportFilter.cs" />
+    <Compile Include="Report\ReportGroupFilter.cs" />
+    <Compile Include="Report\ReportOrderBy.cs" />
+    <Compile Include="Report\ReportRequest.cs" />
+    <Compile Include="Report\Request\AdvertiserAnalyticsDailyReportRequest.cs" />
+    <Compile Include="Report\Request\AdvertiserAnalyticsDailyTest2ReportRequest.cs" />
+    <Compile Include="Report\Request\AdvertiserAnalyticsReportRequest.cs" />
+    <Compile Include="Report\Request\AdvertiserFrequencyRecencyReportRequest.cs" />
+    <Compile Include="Report\Request\AdvertiserFrequencyReportRequest.cs" />
+    <Compile Include="Report\Request\AttributedConversionsReportRequest.cs" />
+    <Compile Include="Report\Request\AudioAnalyticsNetworkReportRequest.cs" />
+    <Compile Include="Report\Request\BuyerBidErrorReportRequest.cs" />
+    <Compile Include="Report\Request\BuyerDataUsageAnalyticsAdvertiserReportRequest.cs" />
+    <Compile Include="Report\Request\BuyerDataUsageAnalyticsReportRequest.cs" />
+    <Compile Include="Report\Request\BuyerInvoiceReportRequest.cs" />
+    <Compile Include="Report\Request\BuyerPlatformBillingReportRequest.cs" />
+    <Compile Include="Report\Request\BuyerPricingReportRequest.cs" />
+    <Compile Include="Report\Request\BuyerSegmentPerformanceReportRequest.cs" />
+    <Compile Include="Report\Request\BuyerUntargetedSegmentPerformanceReportRequest.cs" />
+    <Compile Include="Report\Request\ClicktrackersReportRequest.cs" />
+    <Compile Include="Report\Request\CompletedCreativeAuditsReportRequest.cs" />
+    <Compile Include="Report\Request\ContentCategoryVolumeReportRequest.cs" />
+    <Compile Include="Report\Request\DataUsageAnalyticsForDataProvidersReportRequest.cs" />
+    <Compile Include="Report\Request\DpSegmentUsageReportRequest.cs" />
+    <Compile Include="Report\Request\ForecastReportRequest.cs" />
+    <Compile Include="Report\Request\GeoAnalyticsReportRequest.cs" />
+    <Compile Include="Report\Request\HearstBillingLlReportRequest.cs" />
+    <Compile Include="Report\Request\InsertionOrderFrequencyReportRequest.cs" />
+    <Compile Include="Report\Request\InventoryDailyUniquesReportRequest.cs" />
+    <Compile Include="Report\Request\InventoryDomainAnalyticsReportRequest.cs" />
+    <Compile Include="Report\Request\InventorySourceAnalyticsReportRequest.cs" />
+    <Compile Include="Report\Request\KeyValueAnalyticsReportRequest.cs" />
+    <Compile Include="Report\Request\KeyValuePairAnalyticsReportRequest.cs" />
+    <Compile Include="Report\Request\LineItemFrequencyReportRequest.cs" />
+    <Compile Include="Report\Request\LinkedinWeeklyReportRequest.cs" />
+    <Compile Include="Report\Request\MediationAdjustmentsReportRequest.cs" />
+    <Compile Include="Report\Request\MrcAnalyticsNetworkAdvertiserReportRequest.cs" />
+    <Compile Include="Report\Request\MrcAnalyticsNetworkPublisherBUGISacReportRequest.cs" />
+    <Compile Include="Report\Request\MrcAnalyticsNetworkPublisherReportRequest.cs" />
+    <Compile Include="Report\Request\MrcAnalyticsNetworkReportRequest.cs" />
+    <Compile Include="Report\Request\NetworkAdvertiserAnalyticsReportRequest.cs" />
+    <Compile Include="Report\Request\NetworkAdvertiserFrequencyRecencyReportRequest.cs" />
+    <Compile Include="Report\Request\NetworkAnalyticsFeedReportRequest.cs" />
+    <Compile Include="Report\Request\NetworkAnalyticsProvisionalReportRequest.cs" />
+    <Compile Include="Report\Request\NetworkAnalyticsReportRequest.cs" />
+    <Compile Include="Report\Request\NetworkAttributedConversionsReportRequest.cs" />
+    <Compile Include="Report\Request\NetworkBillingReportRequest.cs" />
+    <Compile Include="Report\Request\NetworkCarrierAnalyticsReportRequest.cs" />
+    <Compile Include="Report\Request\NetworkCreativeSearchReportRequest.cs" />
+    <Compile Include="Report\Request\NetworkDeviceAnalyticsReportRequest.cs" />
+    <Compile Include="Report\Request\NetworkPublisherAnalyticsReportRequest.cs" />
+    <Compile Include="Report\Request\NetworkSiteDomainPerformanceReportRequest.cs" />
+    <Compile Include="Report\Request\OptDashAnalyticsReportRequest.cs" />
+    <Compile Include="Report\Request\OptDashAnalyticsTestReportRequest.cs" />
+    <Compile Include="Report\Request\PartnerCenterBuySideReportRequest.cs" />
+    <Compile Include="Report\Request\PartnerCenterSellSideReportRequest.cs" />
+    <Compile Include="Report\Request\PeriscopeForecastReportRequest.cs" />
+    <Compile Include="Report\Request\PixelFiredReportRequest.cs" />
+    <Compile Include="Report\Request\PlatformBuyerReportRequest.cs" />
+    <Compile Include="Report\Request\PlatformMediationPerformanceReportRequest.cs" />
+    <Compile Include="Report\Request\PlatformSellerReportRequest.cs" />
+    <Compile Include="Report\Request\PlatformSellerSiteDomainPerformanceReportRequest.cs" />
+    <Compile Include="Report\Request\PrebidAnalyticsDailyReportRequest.cs" />
+    <Compile Include="Report\Request\PrebidAnalyticsHourlyReportRequest.cs" />
+    <Compile Include="Report\Request\PrebidAnalyticsReportRequest.cs" />
+    <Compile Include="Report\Request\PublisherAnalyticsReportRequest.cs" />
+    <Compile Include="Report\Request\PublisherBrandReviewReportRequest.cs" />
+    <Compile Include="Report\Request\PublisherCreativeSearchReportRequest.cs" />
+    <Compile Include="Report\Request\RrBidAnalyzerReportRequest.cs" />
+    <Compile Include="Report\Request\RrBuyerAnalyticsBillingPeriodReportRequest.cs" />
+    <Compile Include="Report\Request\RrBuyerAnalyticsDailyReportRequest.cs" />
+    <Compile Include="Report\Request\RrBuyerAnalyticsHourlyReportRequest.cs" />
+    <Compile Include="Report\Request\RrBuyerAnalyticsLifetimeReportRequest.cs" />
+    <Compile Include="Report\Request\RrForecastReportRequest.cs" />
+    <Compile Include="Report\Request\RrPeriscopeForecastReportRequest.cs" />
+    <Compile Include="Report\Request\RrTargetedSegmentAnalyticsDailyReportRequest.cs" />
+    <Compile Include="Report\Request\RrTargetedSegmentAnalyticsHourlyReportRequest.cs" />
+    <Compile Include="Report\Request\SegmentLoadReportRequest.cs" />
+    <Compile Include="Report\Request\SellerAnalyticsDailyReportRequest.cs" />
+    <Compile Include="Report\Request\SellerAnalyticsHourlyReportRequest.cs" />
+    <Compile Include="Report\Request\SellerAnalyticsLifetimeReportRequest.cs" />
+    <Compile Include="Report\Request\SellerBidErrorReportRequest.cs" />
+    <Compile Include="Report\Request\SellerBrandReviewReportRequest.cs" />
+    <Compile Include="Report\Request\SellerDetectedSiteDomainReportRequest.cs" />
+    <Compile Include="Report\Request\SellerFillAndDeliveryNetworkReportRequest.cs" />
+    <Compile Include="Report\Request\SellerFillAndDeliveryPublisherReportRequest.cs" />
+    <Compile Include="Report\Request\SellerInvoiceReportRequest.cs" />
+    <Compile Include="Report\Request\SellerMonetizationReportRequest.cs" />
+    <Compile Include="Report\Request\SellerPlatformBillingReportRequest.cs" />
+    <Compile Include="Report\Request\SellerPricingReportRequest.cs" />
+    <Compile Include="Report\Request\SellerSiteDomainReportRequest.cs" />
+    <Compile Include="Report\Request\SiteDomainPerformanceReportRequest.cs" />
+    <Compile Include="Report\Request\SpendProtectionAnalyticsReportRequest.cs" />
+    <Compile Include="Report\Request\SpendProtectionViolationsReportRequest.cs" />
+    <Compile Include="Report\Request\StandardLogLevelEvents2ReportRequest.cs" />
+    <Compile Include="Report\Request\StandardLogLevelEventsReportRequest.cs" />
+    <Compile Include="Report\Request\SupplementalInvoiceActivityReportRequest.cs" />
+    <Compile Include="Report\Request\TpasAnalyticsReportRequest.cs" />
+    <Compile Include="Report\Request\TtuiPlatformSellerReportRequest.cs" />
+    <Compile Include="Report\Request\TtuiSellerPlatformBillingReportRequest.cs" />
+    <Compile Include="Report\Request\VideoAnalyticsNetworkAdvertiserReportRequest.cs" />
+    <Compile Include="Report\Request\VideoAnalyticsNetworkPublisherReportRequest.cs" />
+    <Compile Include="Report\Request\VideoAnalyticsNetworkReportRequest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Attribute\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
